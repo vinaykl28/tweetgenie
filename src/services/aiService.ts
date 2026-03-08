@@ -18,7 +18,7 @@ export async function generateBrandTweets(data: {
   tone?: string;
 }): Promise<BrandAnalysis> {
   try {
-    const response = await fetch('/api/analyze-brand', {
+    const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
